@@ -55,12 +55,12 @@
                             <div class="fat-nav ">
                                 <div class="fat-nav__wrapper ">
                                     <ul>
-                                        <li><a href="index_logo.html ">首頁-LOGO</a></li>
-                                        <li><a href="index_map.html ">首頁-地圖</a></li>
-                                        <li><a href="index_2.html ">首頁(即時資訊)-1</a></li>
-                                        <li><a href="index_3.html ">首頁(即時資訊)-2</a></li>
-                                        <li><a href="strawberry.html ">草莓</a></li>
-                                        <li><a href="tea_achine.html ">茶葉機</a></li>
+                                        <li><a href="/logo">首頁-LOGO</a></li>
+                                        <li><a href="/map ">首頁-地圖</a></li>
+                                        <li><a href="/farm ">首頁(即時資訊)-1</a></li>
+                                        <li><a href="/greenhouse ">首頁(即時資訊)-2</a></li>
+                                        <li><a href="/berry ">草莓</a></li>
+                                        <li><a href="/tea">茶葉機</a></li>
                                         
                                     </ul>
                                 </div>

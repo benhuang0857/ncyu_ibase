@@ -37,23 +37,7 @@
         <div class="row alert alert-primary ">
             <div class="col-sm-12 col-md-6">溫度：<span id="temp"></span>°C</div>
             <div class="col-sm-12 col-md-6">濕度：<span id="humidity"></span>%RH</div>
-            @for ($i = 0; $i < 24; $i++)
-                <div class="col-sm-12 col-md-6">草莓溫度：<span id="berry-temp{{$i}}"></span>°C</div>
-                <div class="col-sm-12 col-md-6">草莓濕度：<span id="berry-humidity{{$i}}"></span>%RH</div>
-            @endfor
         </div>
-
-        <div class="card-body"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
-            <canvas class="chart chartjs-render-monitor" id="line-chart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%; display: block; width: 576px;" width="576" height="250"></canvas>
-        </div>
-
-        @for ($i = 0; $i < 2; $i++)
-            <div class="col-6 col-md-3 text-center">
-                <div style="display:inline;width:120px;height:120px;"><canvas width="120" height="120"></canvas>
-                    <input type="text" class="knob" id="acid{{$i}}" value="0" data-skin="tron" data-thickness="0.2" data-width="120" data-height="120" data-fgcolor="#f56954" style="width: 64px; height: 40px; position: absolute; vertical-align: middle; margin-top: 40px; margin-left: -92px; border: 0px; background: none; font: bold 24px Arial; text-align: center; color: rgb(245, 105, 84); padding: 0px; appearance: none;">
-                </div>
-            </div>
-        @endfor
 
         <div class="row alert alert-secondary">
             <div class="col-md-4 col-sm-12">{{ config('machine.datas.0') }}：<span id='D0'></span></div>

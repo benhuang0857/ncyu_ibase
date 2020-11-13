@@ -32,3 +32,11 @@ Route::get('/farm', function () {
 Route::get('/berry', function () {
     return view('strawberry');
 });
+
+Route::get('/greenhouse', function () {
+    return view('greenhouse');
+});
+
+Route::get('/tea', function () {
+    return view('tea');
+});
