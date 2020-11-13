@@ -1317,7 +1317,7 @@
 		z-index: 2;
 		left: 1297px;
 		top: 206px;
-		border: 1px solid #FC0;
+		/*border: 1px solid #FC0;*/
 		}
 		#apDiv97 {
 		position: absolute;
