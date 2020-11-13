@@ -6,7 +6,7 @@ $(document).ready(function(){
     getTemp();
     getBerry();
     char();
-    $('.knob').knob({'min':-7, 'max':7});
+    $('.knob').knob({'min':-7.0, 'max':7.0});
 });
 
 function time(){
@@ -81,7 +81,7 @@ function getBerry() {
             var temperature = JSON.parse(json['temperature']);
             var humidity = JSON.parse(json['humidity']);
             var acid = JSON.parse(json['acid']);
-            for(var i=0; i<=2; i++)
+            for(var i=0; i<=24; i++)
             {
                 $('#berry-temp'+i).text(temperature[i]);
                 $('#berry-humidity'+i).text(humidity[i]);
