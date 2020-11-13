@@ -17,6 +17,18 @@ Route::get('/', function () {
     return view('info');
 });
 
+Route::get('/map', function () {
+    return view('index_map');
+});
+
+Route::get('/logo', function () {
+    return view('index_logo');
+});
+
+Route::get('/farm', function () {
+    return view('farm');
+});
+
 Route::get('/berry', function () {
     return view('strawberry');
 });
