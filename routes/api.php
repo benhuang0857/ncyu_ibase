@@ -23,4 +23,4 @@ Route::get('getData', 'TEA\\DataController@getData');
 Route::get('getStatus', 'TEA\\StatusController@getStatus');
 Route::get('getTemp', 'TEA\\StatusController@getTemp');
 Route::get('getBerry', 'StrawberryController@getTemp');
-Route::get('getBerryConductance', 'StrawberryController@getConductance');
+Route::get('getBerrySunshine', 'StrawberryController@getSunshine');

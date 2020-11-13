@@ -20,7 +20,7 @@ class StrawberryController extends Controller
         return response()->json($strawberry, 200);
     }
 
-    public function getConductance()
+    public function getSunshine()
     {
         $strawberry = Strawberry::orderBy('created_at', 'desc')->take(5)->get();
         return response()->json($strawberry, 200);

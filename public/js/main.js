@@ -5,8 +5,10 @@ $(document).ready(function(){
     getAlert();
     getTemp();
     getBerry();
-    char();
-    $('.knob').knob({'min':-7.0, 'max':7.0});
+    sunshinechar();
+    environmentchar();
+    phchar();
+    $('.knob').knob();
 });
 
 function time(){
@@ -81,90 +83,119 @@ function getBerry() {
             var temperature = JSON.parse(json['temperature']);
             var humidity = JSON.parse(json['humidity']);
             var acid = JSON.parse(json['acid']);
+            var conductance = json['conductance'];
             for(var i=0; i<=24; i++)
             {
                 $('#berry-temp'+i).text(temperature[i]);
                 $('#berry-humidity'+i).text(humidity[i]);
             }
 
-            for(var i=0; i<=1; i++)
-            {
-                $('#acid'+i).val(acid[i]);
-            }
+            $('#conductance').val(conductance);
+            $('#apDiv97').text(conductance);
         }
     });
     setTimeout('getBerry()', 3 * 60 * 60 * 1000);
 }
 
-function char() {
+function sunshinechar() {
 
     $.ajax({
-        url: 'api/getBerryConductance',
+        url: 'api/getBerrySunshine',
         method: 'GET',
         dataType: 'json',
         success: function(json){
-            // Sales graph chart
-            var salesGraphChartCanvas = $('#line-chart').get(0).getContext('2d')
-            // $('#revenue-chart').get(0).getContext('2d');
-
-            var salesGraphChartData = {
-                labels: [json[4]['created_at'], json[3]['created_at'], json[2]['created_at'], json[1]['created_at'], json[0]['created_at']],
-                datasets: [
-                    {
-                    label: '導電度',
-                    fill: false,
-                    borderWidth: 2,
-                    lineTension: 0,
-                    spanGaps: true,
-                    borderColor: '#d4edda',
-                    pointRadius: 3,
-                    pointHoverRadius: 7,
-                    pointColor: '#d4edda',
-                    pointBackgroundColor: '#d4edda',
-                    data: [json[4]['conductance'], json[2]['conductance'], json[2]['conductance'], json[1]['conductance'], json[0]['conductance']]
-                    }
-                ]
-            }
-
-            var salesGraphChartOptions = {
-                maintainAspectRatio: false,
-                responsive: true,
-                legend: {
-                    display: false
-                },
-                scales: {
-                    xAxes: [{
-                    ticks: {
-                        fontColor: '#000000'
-                    },
-                    gridLines: {
-                        display: false,
-                        color: '#000000',
-                        drawBorder: false
-                    }
-                    }],
-                    yAxes: [{
-                    ticks: {
-                        stepSize: 5000,
-                        fontColor: '#efefef'
-                    },
-                    gridLines: {
-                        display: true,
-                        color: '#efefef',
-                        drawBorder: false
-                    }
-                    }]
-                }
-            }
-
-            // This will get the first returned node in the jQuery collection.
-            // eslint-disable-next-line no-unused-vars
-            var salesGraphChart = new Chart(salesGraphChartCanvas, {
+            var sunshine4 = JSON.parse(json[4]['sunshine']);
+            var sunshine3 = JSON.parse(json[3]['sunshine']);
+            var sunshine2 = JSON.parse(json[2]['sunshine']);
+            var sunshine1 = JSON.parse(json[1]['sunshine']);
+            var sunshine0 = JSON.parse(json[0]['sunshine']);
+            new Chart(document.getElementById("sunshine-line-chart"), {
                 type: 'line',
-                data: salesGraphChartData,
-                options: salesGraphChartOptions
-            })
+                data: {
+                  labels: [01, 02, 03, 04 , 05],
+                  datasets: [ { 
+                      data: [sunshine4[0],sunshine3[0],sunshine2[0],sunshine1[0],sunshine0[0]],
+                      label: "溫室1",
+                      borderColor: "#3cba9f",
+                      fill: false
+                    }, { 
+                      data: [sunshine4[1],sunshine3[1],sunshine2[1],sunshine1[1],sunshine0[1]],
+                      label: "溫室2",
+                      borderColor: "#e8c3b9",
+                      fill: false
+                    }, { 
+                      data: [sunshine4[2],sunshine3[2],sunshine2[2],sunshine1[2],sunshine0[2]],
+                      label: "溫室3",
+                      borderColor: "#c45850",
+                      fill: false
+                    }
+                  ]
+                }
+              });
         }
     });
-    setTimeout('char()',100000);
+    setTimeout('sunshinechar()',100000);
+
+}
+
+function environmentchar() {
+
+    $.ajax({
+        url: 'api/getBerrySunshine',
+        method: 'GET',
+        dataType: 'json',
+        success: function(json){
+            new Chart(document.getElementById("environment-line-chart"), {
+                type: 'line',
+                data: {
+                  labels: [01, 02, 03, 04 , 05],
+                  datasets: [ { 
+                      data: [json[4]['environment'],json[2]['environment'],json[2]['environment'],json[1]['environment'],json[0]['environment']],
+                      label: "環境溫度",
+                      borderColor: "#f38426",
+                      fill: false
+                    }
+                  ]
+                }
+              });
+        }
+    });
+    setTimeout('environmentchar()',100000);
+
+}
+
+function phchar() {
+
+    $.ajax({
+        url: 'api/getBerrySunshine',
+        method: 'GET',
+        dataType: 'json',
+        success: function(json){
+            var ph4 = JSON.parse(json[4]['acid']);
+            var ph3 = JSON.parse(json[3]['acid']);
+            var ph2 = JSON.parse(json[2]['acid']);
+            var ph1 = JSON.parse(json[1]['acid']);
+            var ph0 = JSON.parse(json[0]['acid']);
+            new Chart(document.getElementById("ph-line-chart"), {
+                type: 'line',
+                data: {
+                  labels: [01, 02, 03, 04 , 05],
+                  datasets: [ { 
+                      data: [ph4[0],ph3[0],ph2[0],ph1[0],ph0[0]],
+                      label: "PH01",
+                      borderColor: "#a2d246",
+                      fill: false
+                    },{ 
+                        data: [ph4[1],ph3[1],ph2[1],ph1[1],ph0[1]],
+                        label: "PH02",
+                        borderColor: "#e8c3b9",
+                        fill: false
+                    }
+                  ]
+                }
+              });
+        }
+    });
+    setTimeout('phchar()',100000);
+
 }
