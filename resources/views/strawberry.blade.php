@@ -1346,6 +1346,10 @@
 		line-height: 31px;
 		}
 
+		body::-webkit-scrollbar {
+			display: none;
+		}
+
 	</style>
     <!--link-->
 </head>
@@ -1363,8 +1367,12 @@
               <div id="apDiv96">
 				<canvas class="char" id="ph-line-chart" width="600" height="220"></canvas>
 			  </div>
-              <div id="apDiv95"></div>
-              <div id="apDiv94"></div>
+              <div id="apDiv95">
+				
+			  </div>
+              <div id="apDiv94">
+				  
+			  </div>
               <div id="apDiv93" style="text-align: center;">
 				<input type="text" class="knob" id="conductance"  style="text-align: center;"
 					data-fgColor="#66CC66"

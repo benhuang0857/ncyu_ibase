@@ -517,6 +517,10 @@
 	line-height: 90px;
 	text-align: right;
 }
+
+body::-webkit-scrollbar {
+			display: none;
+		}
     </style>
     <!--link-->
 </head>

@@ -32,6 +32,9 @@
 	top: 31px;
 }
 
+body::-webkit-scrollbar {
+			display: none;
+		}
 
     </style>
     <!--link-->

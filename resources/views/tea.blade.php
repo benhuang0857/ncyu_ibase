@@ -342,6 +342,9 @@
 	font-family: Arial, Helvetica, sans-serif;
 	line-height: 31px;
 }
+body::-webkit-scrollbar {
+			display: none;
+		}
     </style>
     <!--link-->
 <script type="text/javascript">

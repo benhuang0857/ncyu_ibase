@@ -163,9 +163,16 @@ function getBerry() {
 
             $('#conductance').val(conductance);
             $('#apDiv97').text(conductance);
+
+
+            $("#apDiv94").css('background-image', 'url("/images/berry/farm01.png")');
+            $("#apDiv94").css('background-size', 'cover');
+
+            $("#apDiv95").css('background-image', 'url("/images/berry/farm02.png")');
+            $("#apDiv95").css('background-size', 'cover');
         }
     });
-    setTimeout('getBerry()', 3 * 60 * 60 * 1000);
+    setTimeout('getBerry()', 10000);
 }
 
 function sunshinechar() {
@@ -205,7 +212,7 @@ function sunshinechar() {
               });
         }
     });
-    setTimeout('sunshinechar()',100000);
+    setTimeout('sunshinechar()',60000);
 
 }
 
@@ -231,7 +238,7 @@ function environmentchar() {
               });
         }
     });
-    setTimeout('environmentchar()',100000);
+    setTimeout('environmentchar()',60000);
 
 }
 
@@ -267,6 +274,6 @@ function phchar() {
               });
         }
     });
-    setTimeout('phchar()',100000);
+    setTimeout('phchar()',60000);
 
 }
