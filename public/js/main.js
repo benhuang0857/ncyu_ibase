@@ -165,10 +165,10 @@ function getBerry() {
             $('#apDiv97').text(conductance);
 
 
-            $("#apDiv94").css('background-image', 'url("/images/berry/farm01.png")');
+            $("#apDiv94").css('background-image', 'url("http://140.130.89.171/images/berry/farm01.png")');
             $("#apDiv94").css('background-size', 'cover');
 
-            $("#apDiv95").css('background-image', 'url("/images/berry/farm02.png")');
+            $("#apDiv95").css('background-image', 'url("http://140.130.89.171/images/berry/farm02.png")');
             $("#apDiv95").css('background-size', 'cover');
         }
     });
