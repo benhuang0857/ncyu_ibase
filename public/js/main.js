@@ -172,7 +172,7 @@ function getBerry() {
             $("#apDiv95").css('background-size', 'cover');
         }
     });
-    setTimeout('getBerry()', 10000);
+    setTimeout('getBerry()', 50000);
 }
 
 function sunshinechar() {

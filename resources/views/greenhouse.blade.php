@@ -566,7 +566,7 @@ body::-webkit-scrollbar {
               <div id="apDiv10">氣壓</div>
               <div id="apDiv9">光照度</div>
        	  <div id="apDiv8">CO2</div>
-          <div id="apDiv7">空氣溫度</div>
+          <div id="apDiv7">空氣濕度</div>
               <div id="apDiv6">空氣溫度</div>
               <div id="apDiv5">電壓</div>
 
