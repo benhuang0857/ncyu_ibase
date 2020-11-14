@@ -1,23 +1,71 @@
 $(document).ready(function(){
+    time();
+    getData();
+    getStatus();
+    getAlert();
+    getTemp();
     $('.knob').knob();
 });
 
-function getFarm() {
+function time(){
+    $('#now').text(new Date().toLocaleString());
+    setTimeout("time()", 1000);
+}
+
+function getData() {
     $.ajax({
-        url: 'api/getFarm',
+        url:  "api/getData",
+        method: 'GET',
+        dataType: "json",
+        success: function(json){
+            $.each(json, function(key, object){
+                $('#'+Object.keys(object)[0]).text(Object.values(object)[0]);
+            });
+        }
+    });
+    setTimeout('getData()', 1000);
+}
+
+function getAlert() {
+    $.ajax({
+        url:  "api/getAlert",
+        method: 'GET',
+        dataType: "json",
+        success: function(json){
+            var string = '';
+            $('.alert-danger').text('');
+            $.each(json, function(key, object){
+                string = '<div class="col-md-6 col-sm-12">' + Object.values(object)[0] + '</div>';
+                $('.alert-danger').append(string);
+            });
+        }
+    });
+    setTimeout('getAlert()', 1000);
+}
+
+function getStatus() {
+    $.ajax({
+        url:  "api/getStatus",
+        method: 'GET',
+        dataType: "json",
+        success: function(json){
+            $.each(json, function(key, object){
+                $('#'+Object.keys(object)[0]).removeClass().addClass('align-self-center').addClass(Object.values(object)[0]);
+            });
+        }
+    });
+    setTimeout('getStatus()', 1000);
+}
+
+function getTemp() {
+    $.ajax({
+        url: 'api/getTemp',
         method: 'GET',
         dataType: 'json',
         success: function(json){
-            var temp = json['temperature'];
-            var humidity = json['humidity'];
-            var water_level = json['water_level'];
-            var flow = json['flow'];
-
-            $('#apDiv17').text(temp);
-            $('#apDiv18').text(humidity);
-            $('#apDiv19').text(water_level);
-            $('#apDiv20').text(flow);
+            $('#temp').text(json.records.locations[0].location[1].weatherElement[0].time[0].elementValue[0].value);
+            $('#humidity').text(json.records.locations[0].location[1].weatherElement[1].time[0].elementValue[0].value);
         }
     });
-    setTimeout('getFarm()', 3 * 60 * 60 * 1000);
+    setTimeout('getTemp()', 3 * 60 * 60 * 1000);
 }

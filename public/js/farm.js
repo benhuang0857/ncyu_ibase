@@ -19,5 +19,5 @@ function getFarm() {
             $('#apDiv20').text(flow);
         }
     });
-    setTimeout('getFarm()', 30 * 60 * 1000);
+    setTimeout('getFarm()', 15 * 60 * 1000);
 }

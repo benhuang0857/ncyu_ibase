@@ -1,78 +1,11 @@
 $(document).ready(function(){
-    time();
-    getData();
-    getStatus();
-    getAlert();
-    getTemp();
     getBerry();
     sunshinechar();
     environmentchar();
     phchar();
+    getImg();
     $('.knob').knob();
 });
-
-function time(){
-    $('#now').text(new Date().toLocaleString());
-    setTimeout("time()", 1000);
-}
-
-function getData() {
-    $.ajax({
-        url:  "api/getData",
-        method: 'GET',
-        dataType: "json",
-        success: function(json){
-            $.each(json, function(key, object){
-                $('#'+Object.keys(object)[0]).text(Object.values(object)[0]);
-            });
-        }
-    });
-    setTimeout('getData()', 1000);
-}
-
-function getAlert() {
-    $.ajax({
-        url:  "api/getAlert",
-        method: 'GET',
-        dataType: "json",
-        success: function(json){
-            var string = '';
-            $('.alert-danger').text('');
-            $.each(json, function(key, object){
-                string = '<div class="col-md-6 col-sm-12">' + Object.values(object)[0] + '</div>';
-                $('.alert-danger').append(string);
-            });
-        }
-    });
-    setTimeout('getAlert()', 1000);
-}
-
-function getStatus() {
-    $.ajax({
-        url:  "api/getStatus",
-        method: 'GET',
-        dataType: "json",
-        success: function(json){
-            $.each(json, function(key, object){
-                $('#'+Object.keys(object)[0]).removeClass().addClass('align-self-center').addClass(Object.values(object)[0]);
-            });
-        }
-    });
-    setTimeout('getStatus()', 1000);
-}
-
-function getTemp() {
-    $.ajax({
-        url: 'api/getTemp',
-        method: 'GET',
-        dataType: 'json',
-        success: function(json){
-            $('#temp').text(json.records.locations[0].location[1].weatherElement[0].time[0].elementValue[0].value);
-            $('#humidity').text(json.records.locations[0].location[1].weatherElement[1].time[0].elementValue[0].value);
-        }
-    });
-    setTimeout('getTemp()', 3 * 60 * 60 * 1000);
-}
 
 function getBerry() {
     $.ajax({
@@ -165,6 +98,21 @@ function getBerry() {
             $('#apDiv97').text(conductance);
 
 
+            /*
+            $("#apDiv94").css('background-image', 'url("http://140.130.89.171/images/berry/farm01.png")');
+            $("#apDiv94").css('background-size', 'cover');
+
+            $("#apDiv95").css('background-image', 'url("http://140.130.89.171/images/berry/farm02.png")');
+            $("#apDiv95").css('background-size', 'cover');
+            */
+        }
+    });
+    setTimeout('getBerry()', 15 * 60 * 1000);
+}
+
+function getImg() {
+    $.ajax({
+        success: function(json){
             $("#apDiv94").css('background-image', 'url("http://140.130.89.171/images/berry/farm01.png")');
             $("#apDiv94").css('background-size', 'cover');
 
@@ -172,7 +120,7 @@ function getBerry() {
             $("#apDiv95").css('background-size', 'cover');
         }
     });
-    setTimeout('getBerry()', 50000);
+    setTimeout('getImg()', 1 * 60 * 1000);
 }
 
 function sunshinechar() {
@@ -187,6 +135,7 @@ function sunshinechar() {
             var sunshine2 = JSON.parse(json[2]['sunshine']);
             var sunshine1 = JSON.parse(json[1]['sunshine']);
             var sunshine0 = JSON.parse(json[0]['sunshine']);
+
             new Chart(document.getElementById("sunshine-line-chart"), {
                 type: 'line',
                 data: {
@@ -212,7 +161,7 @@ function sunshinechar() {
               });
         }
     });
-    setTimeout('sunshinechar()',60000);
+    setTimeout('sunshinechar()',15 * 60 * 1000);
 
 }
 
@@ -238,7 +187,7 @@ function environmentchar() {
               });
         }
     });
-    setTimeout('environmentchar()',60000);
+    setTimeout('environmentchar()',15 * 60 * 1000);
 
 }
 
@@ -274,6 +223,6 @@ function phchar() {
               });
         }
     });
-    setTimeout('phchar()',60000);
+    setTimeout('phchar()',15 * 60 * 1000);
 
 }

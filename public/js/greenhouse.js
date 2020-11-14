@@ -28,5 +28,5 @@ function getGreenhouse() {
             $('#apDiv30').text(soil_humidity);
         }
     });
-    setTimeout('getGreenhouse()', 3 * 60 * 1000);
+    setTimeout('getGreenhouse()', 15 * 60 * 1000);
 }
