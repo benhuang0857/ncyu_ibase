@@ -18,6 +18,7 @@ Route::post('data', 'TEA\\DataController@post');
 Route::post('status', 'TEA\\StatusController@post');
 Route::post('postBerry', 'StrawberryController@post');
 Route::post('postFarm', 'FarmController@post');
+Route::post('postGreenhouse', 'GreenhouseController@post');
 
 Route::get('getAlert', 'TEA\\AlertController@getAlert');
 Route::get('getData', 'TEA\\DataController@getData');
@@ -26,3 +27,4 @@ Route::get('getTemp', 'TEA\\StatusController@getTemp');
 Route::get('getBerry', 'StrawberryController@getTemp');
 Route::get('getBerrySunshine', 'StrawberryController@getSunshine');
 Route::get('getFarm', 'FarmController@getOne');
+Route::get('getGreenhouse', 'GreenhouseController@getOne');
