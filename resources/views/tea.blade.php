@@ -379,14 +379,20 @@ function MM_swapImage() { //v3.0
 
             <section>
               <img src="images/map_01.png" width="1921" height="1080" alt="map">
-              <div id="apDiv30">15373</div>
+              <div id="apDiv30">
+				<span id='D2'></span></div>
+			  </div>
               <div id="apDiv29">件</div>
-              <div id="apDiv28">15373</div>
+              <div id="apDiv28">
+				<span id='D1'></span></div>
+			  </div>
               <div id="apDiv27">件</div>
-              <div id="apDiv26">15373</div>
+              <div id="apDiv26">
+				<span id='D0'></span></div>
+			  </div>
               <div id="apDiv25">件</div>
               <div id="apDiv23" style="text-align: center;">
-				<input type="text" class="knob" id="conductance"
+				<input type="text" class="knob" id="charD1"
 					data-fgColor="red"
 					data-thickness=".2"
 					data-width="120"
@@ -399,7 +405,7 @@ function MM_swapImage() { //v3.0
 				>
 			  </div>
               <div id="apDiv24" style="text-align: center;">
-				<input type="text" class="knob" id="conductance"
+				<input type="text" class="knob" id="charD2"
 					data-fgColor="green"
 					data-thickness=".2"
 					data-width="120"
@@ -412,7 +418,7 @@ function MM_swapImage() { //v3.0
 				>
 			  </div>
               <div id="apDiv22" style="text-align: center;">
-				<input type="text" class="knob" id="conductance"
+				<input type="text" class="knob" id="charD0"
 					data-fgColor="orange"
 					data-thickness=".2"
 					data-width="120"
@@ -479,7 +485,6 @@ function MM_swapImage() { //v3.0
         <!-- </section> -->
         <script src="{{asset('fat_nav/jquery1.11.2.min.js')}} "></script>
         <script type="text/javascript " src="{{asset('fat_nav/jquery.fatNav.min.js')}} "></script>
-		<script type="text/javascript " src="{{asset('fat_nav/main.js')}} "></script>
 		<!-- JS, Popper.js, and jQuery -->
 		<script src="{{ asset('js/jquery-3.5.1.min.js') }}"></script>
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
