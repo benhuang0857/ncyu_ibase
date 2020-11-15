@@ -533,14 +533,14 @@ body::-webkit-scrollbar {
 
         <section>
               <img src="images/information_2.png" width="1920" height="1080" alt="map">
-              <div id="apDiv40">hPa</div>
-              <div id="apDiv39">lx</div>
-          <div id="apDiv38">ppm</div>
-          <div id="apDiv37">%</div>
-          <div id="apDiv36">&deg;C</div>
-              <div id="apDiv35">V</div>
-              <div id="apDiv34">56</div>
-              <div id="apDiv33">56</div>
+              <div id="apDiv40"></div>
+              <div id="apDiv39"></div>
+          <div id="apDiv38">m3/s</div>
+          <div id="apDiv37">mm</div>
+          <div id="apDiv36">%</div>
+              <div id="apDiv35">°C</div>
+              <div id="apDiv34"></div>
+              <div id="apDiv33"></div>
           <div id="apDiv32">56</div>
           <div id="apDiv31">56</div>
               <div id="apDiv30">56</div>
@@ -557,12 +557,12 @@ body::-webkit-scrollbar {
           <div id="apDiv19">56</div>
               <div id="apDiv18">56</div>
               <div id="apDiv17">56</div>
-              <div id="apDiv16">氣壓</div>
-          <div id="apDiv15">光照度</div>
-          <div id="apDiv14">CO2</div>
-          <div id="apDiv13">空氣溫度</div>
-          <div id="apDiv12">空氣溫度</div>
-              <div id="apDiv11">電壓</div>
+              <div id="apDiv16"></div>
+          <div id="apDiv15"></div>
+          <div id="apDiv14">流量</div>
+          <div id="apDiv13">濕度</div>
+          <div id="apDiv12">水位</div>
+              <div id="apDiv11">溫度</div>
               <div id="apDiv10"></div>
               <div id="apDiv9"></div>
        	  <div id="apDiv8">流量</div>
@@ -592,8 +592,8 @@ body::-webkit-scrollbar {
                     </tr>
                 </table>
               </div>
-          <div id="apDiv3">水稻田資訊</div>
-          <div id="apDiv4">養雞AI資訊</div>
+          <div id="apDiv3">水稻田資訊01</div>
+          <div id="apDiv4">水稻田資訊02</div>
          
               <!--menu_over-->
                 
@@ -605,7 +605,6 @@ body::-webkit-scrollbar {
         <!-- </section> -->		
 		<script src="{{asset('fat_nav/jquery1.11.2.min.js')}} "></script>
         <script type="text/javascript " src="{{asset('fat_nav/jquery.fatNav.min.js')}} "></script>
-		<script type="text/javascript " src="{{asset('fat_nav/main.js')}} "></script>
 		<!-- JS, Popper.js, and jQuery -->
 		<script src="{{ asset('js/jquery-3.5.1.min.js') }}"></script>
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
