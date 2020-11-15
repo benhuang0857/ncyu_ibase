@@ -70,14 +70,13 @@ function getStatus() {
         dataType: "json",
         success: function(json){
             $i = 7;
-            $j = 2;
+            $j = 1;
             $.each(json, function(key, object){
-                //$('#'+Object.keys(object)[0]).removeClass().addClass('align-self-center').addClass(Object.values(object)[0]);
-                //console.log(Object.values(object)[0]);
                 if(Object.values(object)[0] == 'status_1')
-                    $('#'+Object.keys(object)[0]).attr('src','/images/map_'+$i+'.png');
-                else
                     $('#'+Object.keys(object)[0]).attr('src','/images/map_'+$j+'.png');
+                else
+                    $('#'+Object.keys(object)[0]).attr('src','/images/map_'+$i+'.png');
+                    
                 $i++;
                 $j++;
             });

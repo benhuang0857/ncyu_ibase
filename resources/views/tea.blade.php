@@ -447,25 +447,25 @@ function MM_swapImage() { //v3.0
 				>
 			  </div>
              
-              <div id="apDiv21">N</div>
+              <div id="apDiv21">NaN兩</div>
               <div id="apDiv20">材質設定</div>
-              <div id="apDiv19">自動</div>
+              <div id="apDiv19">NaN兩</div>
               <div id="apDiv18">運作模式</div>
-              <div id="apDiv17">自動</div>
+              <div id="apDiv17">NaN兩</div>
               <div id="apDiv16">執行模式</div>
-              <div id="apDiv15">N</div>
+              <div id="apDiv15">NaN兩</div>
               <div id="apDiv14">機台狀態</div>
               <div id="apDiv13">NaN兩</div>
               <div id="apDiv12">重量設定</div>
               <div id="apDiv11">生產件數</div>
               <div id="apDiv10">目標件數</div>
               <div id="apDiv9">總件數</div>
-              <div id="apDiv3"><a href="#" onMouseOut="MM_swapImgRestore()"><img src="images/map_1.png" width="586" height="124" id="S9"></a></div>
-              <div id="apDiv4"><a href="#" onMouseOut="MM_swapImgRestore()"><img src="images/map_2.png" width="586" height="124" id="S10"></a></div>
-              <div id="apDiv5"><a href="#" onMouseOut="MM_swapImgRestore()"><img src="images/map_3.png" width="586" height="123" id="S11"></a></div>
-              <div id="apDiv6"><a href="#" onMouseOut="MM_swapImgRestore()"><img src="images/map_4.png" width="586" height="119" id="S12"></a></div>
-              <div id="apDiv7"><a href="#" onMouseOut="MM_swapImgRestore()"><img src="images/map_5.png" width="586" height="123" id="S13"></a></div>
-              <div id="apDiv8"><a href="#" onMouseOut="MM_swapImgRestore()"><img src="images/map_6.png" width="586" height="123" id="S14"></a></div>
+              <div id="apDiv3"><a href="#" onMouseOut="MM_swapImgRestore()"><img src="images/map_7.png" width="586" height="124" id="S9"></a></div>
+              <div id="apDiv4"><a href="#" onMouseOut="MM_swapImgRestore()"><img src="images/map_8.png" width="586" height="124" id="S10"></a></div>
+              <div id="apDiv5"><a href="#" onMouseOut="MM_swapImgRestore()"><img src="images/map_9.png" width="586" height="123" id="S11"></a></div>
+              <div id="apDiv6"><a href="#" onMouseOut="MM_swapImgRestore()"><img src="images/map_10.png" width="586" height="119" id="S12"></a></div>
+              <div id="apDiv7"><a href="#" onMouseOut="MM_swapImgRestore()"><img src="images/map_11.png" width="586" height="123" id="S13"></a></div>
+              <div id="apDiv8"><a href="#" onMouseOut="MM_swapImgRestore()"><img src="images/map_12.png" width="586" height="123" id="S14"></a></div>
 
               <div id="apDiv2">
                 <!--menu-->
