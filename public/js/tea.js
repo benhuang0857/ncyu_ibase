@@ -4,8 +4,26 @@ $(document).ready(function(){
     getStatus();
     getAlert();
     getTemp();
+    getWeight();
+    getMachineStatus();
+    getTexture();
     $('.knob').knob();
 });
+
+function MM_findObj(n, d) { //v4.01
+    var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+        d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);
+    }
+    if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+    for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+    if(!x && d.getElementById) x=d.getElementById(n); return x;
+  }
+  
+function MM_swapImage() { //v3.0
+    var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+    if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
 
 function time(){
     $('#now').text(new Date().toLocaleString());
@@ -51,12 +69,81 @@ function getStatus() {
         method: 'GET',
         dataType: "json",
         success: function(json){
+            $i = 7;
+            $j = 2;
             $.each(json, function(key, object){
-                $('#'+Object.keys(object)[0]).removeClass().addClass('align-self-center').addClass(Object.values(object)[0]);
+                //$('#'+Object.keys(object)[0]).removeClass().addClass('align-self-center').addClass(Object.values(object)[0]);
+                //console.log(Object.values(object)[0]);
+                if(Object.values(object)[0] == 'status_1')
+                    $('#'+Object.keys(object)[0]).attr('src','/images/map_'+$i+'.png');
+                else
+                    $('#'+Object.keys(object)[0]).attr('src','/images/map_'+$j+'.png');
+                $i++;
+                $j++;
             });
         }
     });
     setTimeout('getStatus()', 1000);
+}
+
+function getMachineStatus() {
+    $.ajax({
+        url:  "api/getMachineStatus",
+        method: 'GET',
+        dataType: "json",
+        success: function(json){
+            if(json[0]['value'] == 1)
+            {
+                $('#apDiv15').text("機台異常");
+                $('#apDiv17').text("無運作")
+            } 
+            else if(json[0]['value'] != 1 && json[1]['value'] == 1)
+            {
+                $('#apDiv15').text("正常");
+                $('#apDiv19').text("自動模式");
+                $('#apDiv17').text("運作中")
+            }
+            else if(json[0]['value'] != 1 && json[1]['value'] == 0)
+            {
+                $('#apDiv15').text("正常");
+                $('#apDiv19').text("手動模式");
+                $('#apDiv17').text("運作中")
+            }                
+        }
+    });
+    setTimeout('getWeight()', 1000);
+}
+
+function getWeight() {
+    $.ajax({
+        url:  "api/getWeight",
+        method: 'GET',
+        dataType: "json",
+        success: function(json){
+            if(json[0]['value'] == 1)
+                $('#apDiv13').text("2兩");
+            if(json[1]['value'] == 1)
+                $('#apDiv13').text("4兩");
+        }
+    });
+    setTimeout('getWeight()', 1000);
+}
+
+function getTexture() {
+    $.ajax({
+        url:  "api/getTexture",
+        method: 'GET',
+        dataType: "json",
+        success: function(json){
+            if(json[0]['value'] == 1)
+                $('#apDiv21').text("鋁箔");
+            if(json[1]['value'] == 1)
+                $('#apDiv21').text("電鍍");
+            if(json[1]['value'] == 1)
+                $('#apDiv21').text("自訂");
+        }
+    });
+    setTimeout('getWeight()', 1000);
 }
 
 function getTemp() {

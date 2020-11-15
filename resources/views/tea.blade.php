@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>智慧農業戰情中心</title>
-    <link rel="stylesheet" href="index.css">
     <!--link-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href='{{asset('fat_nav/Source+Sans+Pro.css')}}' rel='stylesheet' type='text/css'>
@@ -14,7 +13,24 @@
     <link href='{{asset('fat_nav/jquery.fatNav.min.css')}}' rel='stylesheet' type='text/css'>
     <link href='{{asset('fat_nav/main.css')}}' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{asset('fat_nav/reset.css')}}">
-    <link rel="stylesheet" href="{{asset('fat_nav/index.css')}}">
+	<link rel="stylesheet" href="{{asset('fat_nav/index.css')}}">
+	<style type="text/css">
+        .status_0{
+            display: inline-block;
+            border-radius: 50%;
+            width: 1em;
+            height: 1em;
+            background-color: red;
+        }
+
+        .status_1{
+            display: inline-block;
+            border-radius: 50%;
+            width: 1em;
+            height: 1em;
+            background-color: green; 
+        }
+    </style>
     <style type="text/css">
     #apDiv1 {
 	position: absolute;
@@ -431,25 +447,25 @@ function MM_swapImage() { //v3.0
 				>
 			  </div>
              
-              <div id="apDiv21">鋁箔</div>
+              <div id="apDiv21">N</div>
               <div id="apDiv20">材質設定</div>
               <div id="apDiv19">自動</div>
               <div id="apDiv18">運作模式</div>
               <div id="apDiv17">自動</div>
               <div id="apDiv16">執行模式</div>
-              <div id="apDiv15">正常</div>
+              <div id="apDiv15">N</div>
               <div id="apDiv14">機台狀態</div>
-              <div id="apDiv13">2兩</div>
+              <div id="apDiv13">NaN兩</div>
               <div id="apDiv12">重量設定</div>
               <div id="apDiv11">生產件數</div>
               <div id="apDiv10">目標件數</div>
               <div id="apDiv9">總件數</div>
-              <div id="apDiv3"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image2','','images/map_7.png',1)"><img src="images/map_1.png" width="586" height="124" id="Image2"></a></div>
-              <div id="apDiv4"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image3','','images/map_8.png',1)"><img src="images/map_2.png" width="586" height="124" id="Image3"></a></div>
-              <div id="apDiv5"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image4','','images/map_9.png',1)"><img src="images/map_3.png" width="586" height="123" id="Image4"></a></div>
-              <div id="apDiv6"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image5','','images/map_10.png',1)"><img src="images/map_4.png" width="586" height="119" id="Image5"></a></div>
-              <div id="apDiv7"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image6','','images/map_11.png',1)"><img src="images/map_5.png" width="586" height="123" id="Image6"></a></div>
-              <div id="apDiv8"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image7','','images/map_12.png',1)"><img src="images/map_6.png" width="586" height="123" id="Image7"></a></div>
+              <div id="apDiv3"><a href="#" onMouseOut="MM_swapImgRestore()"><img src="images/map_1.png" width="586" height="124" id="S9"></a></div>
+              <div id="apDiv4"><a href="#" onMouseOut="MM_swapImgRestore()"><img src="images/map_2.png" width="586" height="124" id="S10"></a></div>
+              <div id="apDiv5"><a href="#" onMouseOut="MM_swapImgRestore()"><img src="images/map_3.png" width="586" height="123" id="S11"></a></div>
+              <div id="apDiv6"><a href="#" onMouseOut="MM_swapImgRestore()"><img src="images/map_4.png" width="586" height="119" id="S12"></a></div>
+              <div id="apDiv7"><a href="#" onMouseOut="MM_swapImgRestore()"><img src="images/map_5.png" width="586" height="123" id="S13"></a></div>
+              <div id="apDiv8"><a href="#" onMouseOut="MM_swapImgRestore()"><img src="images/map_6.png" width="586" height="123" id="S14"></a></div>
 
               <div id="apDiv2">
                 <!--menu-->

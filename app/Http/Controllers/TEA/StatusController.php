@@ -29,6 +29,21 @@ class StatusController extends Controller
         return response()->json($status);
     }
 
+    public function getWeight() {
+        $status = Status::whereIn('key', [3, 4])->get();
+        return response()->json($status);
+    }
+
+    public function getMachineStatus() {
+        $status = Status::whereIn('key', [0, 1])->get();
+        return response()->json($status);
+    }
+
+    public function getTexture() {
+        $status = Status::whereIn('key', [6, 7, 8])->get();
+        return response()->json($status);
+    }
+
     public function getTemp() {
         $client = new Client();
         $response = $client->get('http://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-057?Authorization=CWB-7889FB0E-63F2-4B01-9E25-0C59A145F53E&elementName=T,RH');
