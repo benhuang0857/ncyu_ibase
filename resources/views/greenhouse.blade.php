@@ -546,7 +546,7 @@ body::-webkit-scrollbar {
               <div id="apDiv30"></div>
               <div id="apDiv29"></div>
               <div id="apDiv28">hPa</div>
-          <div id="apDiv27">lx</div>
+          <div id="apDiv27">lux</div>
           <div id="apDiv26">ppm</div>
           <div id="apDiv25">%</div>
                   <div id="apDiv24">&deg;C</div>
