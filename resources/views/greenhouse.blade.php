@@ -533,10 +533,10 @@ body::-webkit-scrollbar {
 
         <section>
               <img src="images/information_1.png" width="1920" height="1080" alt="map">
-              <div id="apDiv40">%</div>
-              <div id="apDiv39">&deg;C</div>
-          <div id="apDiv38">%</div>
-          <div id="apDiv37">&deg;C</div>
+              <div id="apDiv40"></div>
+              <div id="apDiv39"></div>
+          <div id="apDiv38"></div>
+          <div id="apDiv37"></div>
           <div id="apDiv36">%</div>
               <div id="apDiv35">&deg;C</div>
               <div id="apDiv34"></div>
