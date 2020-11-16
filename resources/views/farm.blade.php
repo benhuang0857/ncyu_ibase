@@ -560,8 +560,8 @@ body::-webkit-scrollbar {
               <div id="apDiv16"></div>
           <div id="apDiv15"></div>
           <div id="apDiv14">流量</div>
-          <div id="apDiv13">濕度</div>
-          <div id="apDiv12">水位</div>
+          <div id="apDiv13">水位</div>
+          <div id="apDiv12">濕度</div>
               <div id="apDiv11">溫度</div>
               <div id="apDiv10"></div>
               <div id="apDiv9"></div>
