@@ -612,6 +612,7 @@ body::-webkit-scrollbar {
 		<script type="text/javascript" src="{{ asset('js/farm.js') }}"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
 		<script src="{{ asset('js/jquery.knob.min.js') }}"></script>
+        <a href="javascript:void(0)" class="hamburger"><div class="hamburger__icon"></div></a>
 </body>
 
 </html>
