@@ -501,6 +501,7 @@ function MM_swapImage() { //v3.0
         <!-- </section> -->
         <script src="{{asset('fat_nav/jquery1.11.2.min.js')}} "></script>
         <script type="text/javascript " src="{{asset('fat_nav/jquery.fatNav.min.js')}} "></script>
+		<script type="text/javascript " src="{{asset('fat_nav/main.js')}} "></script>
 		<!-- JS, Popper.js, and jQuery -->
 		<script src="{{ asset('js/jquery-3.5.1.min.js') }}"></script>
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -508,7 +509,6 @@ function MM_swapImage() { //v3.0
 		<script type="text/javascript" src="{{ asset('js/tea.js') }}"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
 		<script src="{{ asset('js/jquery.knob.min.js') }}"></script>
-        <a href="javascript:void(0)" class="hamburger"><div class="hamburger__icon"></div></a>
 </body>
 
 </html>
