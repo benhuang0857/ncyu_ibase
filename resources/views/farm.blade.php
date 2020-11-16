@@ -592,8 +592,8 @@ body::-webkit-scrollbar {
                     </tr>
                 </table>
               </div>
-          <div id="apDiv3">水稻田資訊01</div>
-          <div id="apDiv4">水稻田資訊02</div>
+          <div id="apDiv3">嘉大水稻田智慧水份管理01</div>
+          <div id="apDiv4">嘉大水稻田智慧水份管理02</div>
          
               <!--menu_over-->
                 
