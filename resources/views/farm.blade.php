@@ -56,7 +56,7 @@
 	top: 185px;
 	color: rgba(255,255,255,0.9);
 	font-family: "微軟正黑體";
-	font-size: 70px;
+	font-size: 55px;
 	font-weight: bold;
 	line-height: 130px;
 }
@@ -81,7 +81,7 @@
 	top: 450px;
 	color: rgba(255,255,255,0.9);
 	font-family: "微軟正黑體";
-	font-size: 60px;
+	font-size: 55px;
 	line-height: 90px;
 }
     #apDiv7 {
