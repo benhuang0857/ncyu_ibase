@@ -1422,8 +1422,8 @@
               <div id="apDiv11">56</div>
               <div id="apDiv10">56</div>
               <div id="apDiv9">56</div>
-              <div id="apDiv110">&deg;C</div>
-              <div id="apDiv109">%</div>
+              <div id="apDiv110">%</div>
+              <div id="apDiv109">&deg;C</div>
               <div id="apDiv108">%</div>
               <div id="apDiv107">&deg;C</div>
               <div id="apDiv106">%</div>
