@@ -602,7 +602,7 @@ body::-webkit-scrollbar {
 
 
         </div>
-        <!-- </section> -->		
+        <!-- </section> -->
 		<script src="{{asset('fat_nav/jquery1.11.2.min.js')}} "></script>
         <script type="text/javascript " src="{{asset('fat_nav/jquery.fatNav.min.js')}} "></script>
 		<script type="text/javascript " src="{{asset('fat_nav/main.js')}} "></script>
@@ -613,6 +613,7 @@ body::-webkit-scrollbar {
 		<script type="text/javascript" src="{{ asset('js/farm.js') }}"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
 		<script src="{{ asset('js/jquery.knob.min.js') }}"></script>
+        <!-- JS, Popper.js, and jQuery -->
 </body>
 
 </html>
