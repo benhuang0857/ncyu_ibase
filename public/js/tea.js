@@ -121,8 +121,10 @@ function getWeight() {
         success: function(json){
             if(json[0]['value'] == 1)
                 $('#apDiv13').text("2兩");
-            if(json[1]['value'] == 1)
+            else if(json[1]['value'] == 1)
                 $('#apDiv13').text("4兩");
+            else
+                $('#apDiv13').text("未設定");
         }
     });
     setTimeout('getWeight()', 1000);
@@ -138,7 +140,7 @@ function getTexture() {
                 $('#apDiv21').text("鋁箔");
             if(json[1]['value'] == 1)
                 $('#apDiv21').text("電鍍");
-            if(json[1]['value'] == 1)
+            if(json[2]['value'] == 1)
                 $('#apDiv21').text("自訂");
         }
     });
