@@ -20,7 +20,7 @@ class StatusController extends Controller
     }
 
     public function getStatus() {
-        $status = Status::whereIn('key', [9, 10, 11, 12, 13, 14, 15, 25, 26, 27, 28, 29, 30])->get();
+        $status = Status::whereIn('key', [9, 10, 11, 12, 13, 14])->get();
 
         $status->transform(function($item){
             return ['S'.$item->key => 'status_'.$item->value];

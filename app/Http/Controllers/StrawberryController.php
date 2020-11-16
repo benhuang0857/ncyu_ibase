@@ -22,7 +22,7 @@ class StrawberryController extends Controller
 
     public function getSunshine()
     {
-        $strawberry = Strawberry::orderBy('created_at', 'desc')->take(5)->get();
+        $strawberry = Strawberry::orderBy('created_at', 'desc')->take(12)->get();
         return response()->json($strawberry, 200);
     }
 }

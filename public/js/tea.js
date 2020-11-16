@@ -138,10 +138,12 @@ function getTexture() {
         success: function(json){
             if(json[0]['value'] == 1)
                 $('#apDiv21').text("鋁箔");
-            if(json[1]['value'] == 1)
+            else if(json[1]['value'] == 1)
                 $('#apDiv21').text("電鍍");
-            if(json[2]['value'] == 1)
+            else if(json[2]['value'] == 1)
                 $('#apDiv21').text("自訂");
+            else
+                $('#apDiv21').text("未設定");
         }
     });
     setTimeout('getWeight()', 1000);

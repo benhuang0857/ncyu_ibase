@@ -111,7 +111,7 @@ function getImg() {
             $("#apDiv95").css('background-size', 'cover');
         }
     });
-    setTimeout('getImg()', 1 * 60 * 1000);
+    setTimeout('getImg()', 30 * 1000);
 }
 
 function sunshinechar() {
@@ -121,6 +121,13 @@ function sunshinechar() {
         method: 'GET',
         dataType: 'json',
         success: function(json){
+            var sunshine11 = JSON.parse(json[11]['sunshine']);
+            var sunshine10 = JSON.parse(json[10]['sunshine']);
+            var sunshine9 = JSON.parse(json[9]['sunshine']);
+            var sunshine8 = JSON.parse(json[8]['sunshine']);
+            var sunshine7 = JSON.parse(json[7]['sunshine']);
+            var sunshine6 = JSON.parse(json[6]['sunshine']);
+            var sunshine5 = JSON.parse(json[5]['sunshine']);
             var sunshine4 = JSON.parse(json[4]['sunshine']);
             var sunshine3 = JSON.parse(json[3]['sunshine']);
             var sunshine2 = JSON.parse(json[2]['sunshine']);
@@ -130,19 +137,31 @@ function sunshinechar() {
             new Chart(document.getElementById("sunshine-line-chart"), {
                 type: 'line',
                 data: {
-                  labels: [01, 02, 03, 04 , 05],
+                  labels: [02, 04, 06, 08 , 10, 12, 14, 16, 18, 20, 22, 24],
                   datasets: [ { 
-                      data: [sunshine4[0],sunshine3[0],sunshine2[0],sunshine1[0],sunshine0[0]],
+                      data: [
+                        sunshine11[0],sunshine10[0],sunshine9[0],sunshine8[0],sunshine7[0],
+                        sunshine6[0],sunshine5[0],sunshine4[0],sunshine3[0],sunshine2[0],
+                        sunshine1[0],sunshine0[0]
+                      ],
                       label: "溫室1",
                       borderColor: "#3cba9f",
                       fill: false
                     }, { 
-                      data: [sunshine4[1],sunshine3[1],sunshine2[1],sunshine1[1],sunshine0[1]],
+                      data: [
+                        sunshine11[1],sunshine10[1],sunshine9[1],sunshine8[1],sunshine7[1],
+                        sunshine6[1],sunshine5[1],sunshine4[1],sunshine3[1],sunshine2[1],
+                        sunshine1[1],sunshine0[1]
+                      ],
                       label: "溫室2",
                       borderColor: "#e8c3b9",
                       fill: false
                     }, { 
-                      data: [sunshine4[2],sunshine3[2],sunshine2[2],sunshine1[2],sunshine0[2]],
+                      data: [
+                        sunshine11[2],sunshine10[2],sunshine9[2],sunshine8[2],sunshine7[2],
+                        sunshine6[2],sunshine5[2],sunshine4[2],sunshine3[2],sunshine2[2],
+                        sunshine1[2],sunshine0[2]
+                      ],
                       label: "溫室3",
                       borderColor: "#c45850",
                       fill: false
@@ -152,7 +171,7 @@ function sunshinechar() {
               });
         }
     });
-    setTimeout('sunshinechar()',15 * 60 * 1000);
+    setTimeout('sunshinechar()',2 * 60 * 60 * 1000);
 
 }
 
@@ -166,9 +185,13 @@ function environmentchar() {
             new Chart(document.getElementById("environment-line-chart"), {
                 type: 'line',
                 data: {
-                  labels: [01, 02, 03, 04 , 05],
+                  labels: [02, 04, 06, 08 , 10, 12, 14, 16, 18, 20, 22, 24],
                   datasets: [ { 
-                      data: [json[4]['environment'],json[2]['environment'],json[2]['environment'],json[1]['environment'],json[0]['environment']],
+                      data: [
+                        json[11]['environment'],json[10]['environment'],json[9]['environment'],json[8]['environment'],
+                        json[7]['environment'],json[6]['environment'],json[5]['environment'],json[4]['environment'],
+                        json[3]['environment'],json[2]['environment'],json[1]['environment'],json[0]['environment']
+                      ],
                       label: "環境溫度",
                       borderColor: "#f38426",
                       fill: false
@@ -178,7 +201,7 @@ function environmentchar() {
               });
         }
     });
-    setTimeout('environmentchar()',15 * 60 * 1000);
+    setTimeout('environmentchar()',2 * 60 * 60 * 1000);
 
 }
 
@@ -189,22 +212,38 @@ function phchar() {
         method: 'GET',
         dataType: 'json',
         success: function(json){
+            var ph11 = JSON.parse(json[11]['acid']);
+            var ph10 = JSON.parse(json[10]['acid']);
+            var ph9 = JSON.parse(json[9]['acid']);
+            var ph8 = JSON.parse(json[8]['acid']);
+            var ph7 = JSON.parse(json[7]['acid']);
+            var ph6 = JSON.parse(json[6]['acid']);
+            var ph5 = JSON.parse(json[5]['acid']);
             var ph4 = JSON.parse(json[4]['acid']);
             var ph3 = JSON.parse(json[3]['acid']);
             var ph2 = JSON.parse(json[2]['acid']);
             var ph1 = JSON.parse(json[1]['acid']);
             var ph0 = JSON.parse(json[0]['acid']);
+
             new Chart(document.getElementById("ph-line-chart"), {
                 type: 'line',
                 data: {
-                  labels: [01, 02, 03, 04 , 05],
+                  labels: [02, 04, 06, 08 , 10, 12, 14, 16, 18, 20, 22, 24],
                   datasets: [ { 
-                      data: [ph4[0],ph3[0],ph2[0],ph1[0],ph0[0]],
+                      data: [
+                        ph11[0],ph10[0],ph9[0],ph8[0],
+                        ph7[0],ph6[0],ph5[0],ph4[0],
+                        ph3[0],ph2[0],ph1[0],ph0[0],
+                      ],
                       label: "PH01",
                       borderColor: "#a2d246",
                       fill: false
                     },{ 
-                        data: [ph4[1],ph3[1],ph2[1],ph1[1],ph0[1]],
+                        data: [
+                          ph11[1],ph10[1],ph9[1],ph8[1],
+                          ph7[1],ph6[1],ph5[1],ph4[1],
+                          ph3[1],ph2[1],ph1[1],ph0[1],
+                        ],
                         label: "PH02",
                         borderColor: "#e8c3b9",
                         fill: false
@@ -214,6 +253,6 @@ function phchar() {
               });
         }
     });
-    setTimeout('phchar()',15 * 60 * 1000);
+    setTimeout('phchar()',2 * 60 * 60 * 1000);
 
 }
