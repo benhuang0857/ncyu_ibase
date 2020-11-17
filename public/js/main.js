@@ -138,7 +138,6 @@ function sunshinechar() {
                   ]
                 }
               });
-            myChart.addData([40], "04");
         }
     });
     setTimeout('sunshinechar()',2 * 60 * 60 * 1000);
