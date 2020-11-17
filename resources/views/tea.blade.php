@@ -414,8 +414,8 @@ function MM_swapImage() { //v3.0
 					data-width="120"
 					data-cursor=true
 					data-rotation=anticlockwise
-					data-min="100"
-					data-max="-1000"
+					data-min="0"
+					data-max="1000"
 					value=0
 					readonly
 				>
@@ -427,8 +427,8 @@ function MM_swapImage() { //v3.0
 					data-width="120"
 					data-cursor=true
 					data-rotation=anticlockwise
-					data-min="100"
-					data-max="-1000"
+					data-min="0"
+					data-max="1000"
 					value=0
 					readonly
 				>
@@ -440,8 +440,8 @@ function MM_swapImage() { //v3.0
 					data-width="120"
 					data-cursor=true
 					data-rotation=anticlockwise
-					data-min="100"
-					data-max="-1000"
+					data-min="0"
+					data-max="1000"
 					value=0
 					readonly
 				>
