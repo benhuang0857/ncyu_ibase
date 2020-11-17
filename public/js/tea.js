@@ -1,9 +1,5 @@
 $(document).ready(function(){
-    time();
-    getData();
     getStatus();
-    getAlert();
-    getTemp();
     getWeight();
     getMachineStatus();
     getTexture();
