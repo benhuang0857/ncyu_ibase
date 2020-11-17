@@ -83,7 +83,7 @@ function getMachineStatus() {
             }                
         }
     });
-    setTimeout('getWeight()', 1000);
+    setTimeout('getMachineStatus()', 1000);
 }
 
 function getWeight() {
@@ -119,7 +119,7 @@ function getTexture() {
                 $('#apDiv21').text("未設定");
         }
     });
-    setTimeout('getWeight()', 1000);
+    setTimeout('getTexture()', 1000);
 }
 
 function getTemp() {
@@ -132,5 +132,5 @@ function getTemp() {
             $('#humidity').text(json.records.locations[0].location[1].weatherElement[1].time[0].elementValue[0].value);
         }
     });
-    setTimeout('getTemp()', 3 * 60 * 60 * 1000);
+    setTimeout('getTemp()', 1000);
 }
