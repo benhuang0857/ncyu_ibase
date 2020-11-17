@@ -460,12 +460,12 @@ function MM_swapImage() { //v3.0
               <div id="apDiv11">生產件數</div>
               <div id="apDiv10">目標件數</div>
               <div id="apDiv9">總件數</div>
-              <div id="apDiv3"><a href="#" onMouseOut="MM_swapImgRestore()"><img src="images/map_7.png" width="586" height="124" id="S9"></a></div>
-              <div id="apDiv4"><a href="#" onMouseOut="MM_swapImgRestore()"><img src="images/map_8.png" width="586" height="124" id="S10"></a></div>
-              <div id="apDiv5"><a href="#" onMouseOut="MM_swapImgRestore()"><img src="images/map_9.png" width="586" height="123" id="S11"></a></div>
-              <div id="apDiv6"><a href="#" onMouseOut="MM_swapImgRestore()"><img src="images/map_10.png" width="586" height="119" id="S12"></a></div>
-              <div id="apDiv7"><a href="#" onMouseOut="MM_swapImgRestore()"><img src="images/map_11.png" width="586" height="123" id="S13"></a></div>
-              <div id="apDiv8"><a href="#" onMouseOut="MM_swapImgRestore()"><img src="images/map_12.png" width="586" height="123" id="S14"></a></div>
+              <div id="apDiv3"><a href="#" onMouseOut="MM_swapImgRestore()"><img src="images/map_7.png" width="586" height="124" id="S11"></a></div>
+              <div id="apDiv4"><a href="#" onMouseOut="MM_swapImgRestore()"><img src="images/map_8.png" width="586" height="124" id="S12"></a></div>
+              <div id="apDiv5"><a href="#" onMouseOut="MM_swapImgRestore()"><img src="images/map_9.png" width="586" height="123" id="S13"></a></div>
+              <div id="apDiv6"><a href="#" onMouseOut="MM_swapImgRestore()"><img src="images/map_10.png" width="586" height="119" id="S14"></a></div>
+              <div id="apDiv7"><a href="#" onMouseOut="MM_swapImgRestore()"><img src="images/map_11.png" width="586" height="123" id="S15"></a></div>
+              <div id="apDiv8"><a href="#" onMouseOut="MM_swapImgRestore()"><img src="images/map_12.png" width="586" height="123" id="S16"></a></div>
 
               <div id="apDiv2">
                 <!--menu-->

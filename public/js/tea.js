@@ -24,45 +24,6 @@ function MM_swapImage() { //v3.0
     if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
 }
 
-
-function time(){
-    $('#now').text(new Date().toLocaleString());
-    setTimeout("time()", 1000);
-}
-
-function getData() {
-    $.ajax({
-        url:  "api/getData",
-        method: 'GET',
-        dataType: "json",
-        success: function(json){
-            $.each(json, function(key, object){
-                $('#'+Object.keys(object)[0]).text(Object.values(object)[0]);
-                $('#char'+Object.keys(object)[0]).val(Object.values(object)[0]);
-            });
-            
-        }
-    });
-    setTimeout('getData()', 1000);
-}
-
-function getAlert() {
-    $.ajax({
-        url:  "api/getAlert",
-        method: 'GET',
-        dataType: "json",
-        success: function(json){
-            var string = '';
-            $('.alert-danger').text('');
-            $.each(json, function(key, object){
-                string = '<div class="col-md-6 col-sm-12">' + Object.values(object)[0] + '</div>';
-                $('.alert-danger').append(string);
-            });
-        }
-    });
-    setTimeout('getAlert()', 1000);
-}
-
 function getStatus() {
     $.ajax({
         url:  "api/getStatus",
