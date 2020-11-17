@@ -25,73 +25,73 @@ function getBerry() {
             $('#apDiv28').text(humidity[0]+20);
 
             $('#apDiv29').text(temperature[1]);
-            $('#apDiv30').text(humidity[1]);
+            $('#apDiv30').text(humidity[1]+20);
 
             $('#apDiv32').text(temperature[2]);
-            $('#apDiv31').text(humidity[2]);
+            $('#apDiv31').text(humidity[2]+20);
 
             $('#apDiv55').text(temperature[3]);
-            $('#apDiv56').text(humidity[3]);
+            $('#apDiv56').text(humidity[3]+20);
 
             $('#apDiv51').text(temperature[4]);
-            $('#apDiv52').text(humidity[4]);
+            $('#apDiv52').text(humidity[4]+20);
 
             $('#apDiv53').text(temperature[5]);
-            $('#apDiv54').text(humidity[5]);
+            $('#apDiv54').text(humidity[5]+20);
 
             $('#apDiv39').text(temperature[6]);
-            $('#apDiv40').text(humidity[6]);
+            $('#apDiv40').text(humidity[6]+20);
 
             $('#apDiv41').text(temperature[7]);
-            $('#apDiv42').text(humidity[7]);
+            $('#apDiv42').text(humidity[7]+20);
 
             $('#apDiv43').text(temperature[8]);
-            $('#apDiv44').text(humidity[8]);
+            $('#apDiv44').text(humidity[8]+20);
 
             $('#apDiv99').text(temperature[9]);
-            $('#apDiv100').text(humidity[9]);
+            $('#apDiv100').text(humidity[9]+20);
 
             $('#apDiv101').text(temperature[10]);
-            $('#apDiv102').text(humidity[10]);
+            $('#apDiv102').text(humidity[10]+20);
 
             $('#apDiv103').text(temperature[10]);
-            $('#apDiv104').text(humidity[10]);
+            $('#apDiv104').text(humidity[10]+20);
 
             $('#apDiv81').text(temperature[11]);
-            $('#apDiv82').text(humidity[11]);
+            $('#apDiv82').text(humidity[11]+20);
 
             $('#apDiv83').text(temperature[12]);
-            $('#apDiv84').text(humidity[12]);
+            $('#apDiv84').text(humidity[12]+20);
 
             $('#apDiv85').text(temperature[13]);
-            $('#apDiv86').text(humidity[13]);
+            $('#apDiv86').text(humidity[13]+20);
 
             $('#apDiv9').text(temperature[14]);
-            $('#apDiv10').text(humidity[14]);
+            $('#apDiv10').text(humidity[14]+20);
 
             $('#apDiv11').text(temperature[15]);
-            $('#apDiv12').text(humidity[15]);
+            $('#apDiv12').text(humidity[15]+20);
 
             $('#apDiv13').text(temperature[16]);
-            $('#apDiv14').text(humidity[16]);
+            $('#apDiv14').text(humidity[16]+20);
 
             $('#apDiv21').text(temperature[17]);
-            $('#apDiv22').text(humidity[17]);
+            $('#apDiv22').text(humidity[17]+20);
 
             $('#apDiv23').text(temperature[18]);
-            $('#apDiv24').text(humidity[18]);
+            $('#apDiv24').text(humidity[18]+20);
 
             $('#apDiv25').text(temperature[19]);
-            $('#apDiv26').text(humidity[19]);
+            $('#apDiv26').text(humidity[19]+20);
 
             $('#apDiv63').text(temperature[20]);
-            $('#apDiv64').text(humidity[20]);
+            $('#apDiv64').text(humidity[20]+20);
 
             $('#apDiv65').text(temperature[21]);
-            $('#apDiv66').text(humidity[21]);
+            $('#apDiv66').text(humidity[21]+20);
 
             $('#apDiv67').text(temperature[22]);
-            $('#apDiv68').text(humidity[22]);
+            $('#apDiv68').text(humidity[22]+20);
 
 
             $('#conductance').val(conductance);
