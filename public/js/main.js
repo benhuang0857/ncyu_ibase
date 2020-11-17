@@ -123,7 +123,7 @@ function sunshinechar() {
         success: function(json){
             var sunshine11 = JSON.parse(json[11]['sunshine']);
 
-            new Chart(document.getElementById("sunshine-line-chart"), {
+            var myChart = new Chart(document.getElementById("sunshine-line-chart"), {
                 type: 'line',
                 data: {
                   labels: [02, 04, 06, 08 , 10, 12, 14, 16, 18, 20, 22, 24],
@@ -138,7 +138,7 @@ function sunshinechar() {
                   ]
                 }
               });
-            Chart.addData([40, 60], "August");
+            myChart.addData([40, 60], "August");
         }
     });
     setTimeout('sunshinechar()',2 * 60 * 60 * 1000);
