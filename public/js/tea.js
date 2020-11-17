@@ -67,20 +67,29 @@ function getMachineStatus() {
             if(json[0]['value'] == 1)
             {
                 $('#apDiv15').text("機台異常");
-                $('#apDiv17').text("無運作")
-            } 
-            else if(json[0]['value'] != 1 && json[1]['value'] == 1)
-            {
-                $('#apDiv15').text("正常");
-                $('#apDiv19').text("自動模式");
-                $('#apDiv17').text("運作中")
             }
-            else if(json[0]['value'] != 1 && json[1]['value'] == 0)
+            else if(json[0]['value'] == 0)
             {
                 $('#apDiv15').text("正常");
-                $('#apDiv19').text("手動模式");
-                $('#apDiv17').text("無運作")
-            }                
+            }
+            
+            if(json[1]['value'] == 1)
+            {
+                $('#apDiv17').text("自動模式");
+            }
+            else if(json[1]['value'] == 0)
+            {
+                $('#apDiv17').text("手動模式");
+            }  
+            
+            if(json[2]['value'] == 1)
+            {
+                $('#apDiv19').text("自動運轉中");
+            }
+            else if(json[1]['value'] == 0)
+            {
+                $('#apDiv19').text("待機中");
+            } 
         }
     });
     setTimeout('getMachineStatus()', 1000);
