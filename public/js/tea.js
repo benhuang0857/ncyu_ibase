@@ -1,10 +1,25 @@
 $(document).ready(function(){
+    getData();
     getStatus();
     getWeight();
     getMachineStatus();
     getTexture();
     $('.knob').knob();
 });
+
+function getData() {
+    $.ajax({
+        url:  "api/getData",
+        method: 'GET',
+        dataType: "json",
+        success: function(json){
+            $.each(json, function(key, object){
+                $('#'+Object.keys(object)[0]).text(Object.values(object)[0]);
+            });
+        }
+    });
+    setTimeout('getData()', 1000);
+}
 
 function MM_findObj(n, d) { //v4.01
     var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
