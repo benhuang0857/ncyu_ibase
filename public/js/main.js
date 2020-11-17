@@ -134,7 +134,7 @@ function sunshinechar() {
                       label: "溫室1",
                       borderColor: "#3cba9f",
                       fill: false,
-                      myChart.addData([40], "04");
+                      myChart.addData([40], "04")
                     } 
                   ]
                 }
