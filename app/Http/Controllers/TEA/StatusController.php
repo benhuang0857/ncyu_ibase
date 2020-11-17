@@ -35,7 +35,7 @@ class StatusController extends Controller
     }
 
     public function getMachineStatus() {
-        $status = Status::whereIn('key', [0, 1])->get();
+        $status = Status::whereIn('key', [0, 1, 2])->get();
         return response()->json($status);
     }
 
