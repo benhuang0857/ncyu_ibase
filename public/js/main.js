@@ -122,17 +122,6 @@ function sunshinechar() {
         dataType: 'json',
         success: function(json){
             var sunshine11 = JSON.parse(json[11]['sunshine']);
-            var sunshine10 = JSON.parse(json[10]['sunshine']);
-            var sunshine9 = JSON.parse(json[9]['sunshine']);
-            var sunshine8 = JSON.parse(json[8]['sunshine']);
-            var sunshine7 = JSON.parse(json[7]['sunshine']);
-            var sunshine6 = JSON.parse(json[6]['sunshine']);
-            var sunshine5 = JSON.parse(json[5]['sunshine']);
-            var sunshine4 = JSON.parse(json[4]['sunshine']);
-            var sunshine3 = JSON.parse(json[3]['sunshine']);
-            var sunshine2 = JSON.parse(json[2]['sunshine']);
-            var sunshine1 = JSON.parse(json[1]['sunshine']);
-            var sunshine0 = JSON.parse(json[0]['sunshine']);
 
             new Chart(document.getElementById("sunshine-line-chart"), {
                 type: 'line',
@@ -140,40 +129,18 @@ function sunshinechar() {
                   labels: [02, 04, 06, 08 , 10, 12, 14, 16, 18, 20, 22, 24],
                   datasets: [ { 
                       data: [
-                        sunshine11[0],sunshine10[0],sunshine9[0],sunshine8[0],sunshine7[0],
-                        sunshine6[0],sunshine5[0],sunshine4[0],sunshine3[0],sunshine2[0],
-                        sunshine1[0],sunshine0[0]
+                        sunshine11[0]
                       ],
                       label: "溫室1",
                       borderColor: "#3cba9f",
                       fill: false
-                    }, { 
-                      data: [
-                        sunshine11[1],sunshine10[1],sunshine9[1],sunshine8[1],sunshine7[1],
-                        sunshine6[1],sunshine5[1],sunshine4[1],sunshine3[1],sunshine2[1],
-                        sunshine1[1],sunshine0[1]
-                      ],
-                      label: "溫室2",
-                      borderColor: "#e8c3b9",
-                      fill: false
-                    }, { 
-                      data: [
-                        sunshine11[2],sunshine10[2],sunshine9[2],sunshine8[2],sunshine7[2],
-                        sunshine6[2],sunshine5[2],sunshine4[2],sunshine3[2],sunshine2[2],
-                        sunshine1[2],sunshine0[2]
-                      ],
-                      label: "溫室3",
-                      borderColor: "#c45850",
-                      fill: false
-                    }
+                    } 
                   ]
                 }
               });
+            myLineChart.addData([40, 60], "August");
         }
-        
-    }
-          Chart.addData(40, "August");
-    );
+    });
     setTimeout('sunshinechar()',2 * 60 * 60 * 1000);
 
 }
