@@ -170,8 +170,9 @@ function sunshinechar() {
                 }
               });
         }
-        Chart.addData(40, "August");
+        
     });
+    Chart.addData(40, "August");
     setTimeout('sunshinechar()',2 * 60 * 60 * 1000);
 
 }
