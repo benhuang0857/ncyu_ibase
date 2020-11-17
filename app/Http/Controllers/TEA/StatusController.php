@@ -20,7 +20,7 @@ class StatusController extends Controller
     }
 
     public function getStatus() {
-        $status = Status::whereIn('key', [9, 10, 11, 12, 13, 14])->get();
+        $status = Status::whereIn('key', [11, 12, 13, 14, 15, 16])->get();
 
         $status->transform(function($item){
             return ['S'.$item->key => 'status_'.$item->value];
@@ -30,7 +30,7 @@ class StatusController extends Controller
     }
 
     public function getWeight() {
-        $status = Status::whereIn('key', [3, 4])->get();
+        $status = Status::whereIn('key', [5, 6])->get();
         return response()->json($status);
     }
 
@@ -40,7 +40,7 @@ class StatusController extends Controller
     }
 
     public function getTexture() {
-        $status = Status::whereIn('key', [6, 7, 8])->get();
+        $status = Status::whereIn('key', [8, 9, 10])->get();
         return response()->json($status);
     }
 
