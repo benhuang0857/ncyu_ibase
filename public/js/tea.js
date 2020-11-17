@@ -15,7 +15,7 @@ function getData() {
         success: function(json){
             $.each(json, function(key, object){
                 $('#'+Object.keys(object)[0]).text(Object.values(object)[0]);
-                $('#charD'+Object.keys(object)[0]).value(Object.values(object)[0]);
+                $('#charD'+Object.keys(object)[0]).val(Object.values(object)[0]);
             });
         }
     });
