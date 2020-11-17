@@ -134,12 +134,11 @@ function sunshinechar() {
                       label: "溫室1",
                       borderColor: "#3cba9f",
                       fill: false,
-                      
                     } 
-                  ],
-                  myChart.addData([40], "04")
+                  ]
                 }
               });
+            myChart.addData([40], "04");
         }
     });
     setTimeout('sunshinechar()',2 * 60 * 60 * 1000);
