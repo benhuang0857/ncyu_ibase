@@ -447,15 +447,15 @@ function MM_swapImage() { //v3.0
 				>
 			  </div>
              
-              <div id="apDiv21">NaN兩</div>
+              <div id="apDiv21">無</div>
               <div id="apDiv20">材質設定</div>
-              <div id="apDiv19">NaN兩</div>
+              <div id="apDiv19">無</div>
               <div id="apDiv18">運作模式</div>
-              <div id="apDiv17">NaN兩</div>
+              <div id="apDiv17">無</div>
               <div id="apDiv16">執行模式</div>
-              <div id="apDiv15">NaN兩</div>
+              <div id="apDiv15">無</div>
               <div id="apDiv14">機台狀態</div>
-              <div id="apDiv13">NaN兩</div>
+              <div id="apDiv13">無</div>
               <div id="apDiv12">重量設定</div>
               <div id="apDiv11">生產件數</div>
               <div id="apDiv10">目標件數</div>
