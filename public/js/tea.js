@@ -63,7 +63,7 @@ function getMachineStatus() {
             {
                 $('#apDiv15').text("正常");
                 $('#apDiv19').text("手動模式");
-                $('#apDiv17').text("運作中")
+                $('#apDiv17').text("無運作")
             }                
         }
     });
