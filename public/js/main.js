@@ -1,7 +1,7 @@
 $(document).ready(function(){
     getBerry();
     sunshinechar();
-    environmentchar();
+    //environmentchar();
     phchar();
     getImg();
     $('.knob').knob();
@@ -22,7 +22,7 @@ function getBerry() {
             *溫度濕度
             */
             $('#apDiv27').text(temperature[0]);
-            $('#apDiv28').text(humidity[0]);
+            $('#apDiv28').text(humidity[0]+20);
 
             $('#apDiv29').text(temperature[1]);
             $('#apDiv30').text(humidity[1]);
@@ -115,6 +115,55 @@ function getImg() {
 }
 
 function sunshinechar() {
+  $.ajax({
+      url: 'api/getBerrySunshine',
+      method: 'GET',
+      dataType: 'json',
+      success: function(json){
+        var ctx = document.getElementById('sunshine-line-chart').getContext('2d');
+        var myChart = new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: [02, 04, 06, 08 , 10, 12, 14, 16, 18, 20, 22, 24],
+            datasets: [{ 
+                data: [],
+                label: "溫室1",
+                borderColor: "green",
+                fill: false,
+              },
+              { 
+                data: [],
+                label: "溫室2",
+                borderColor: "white",
+                fill: false,
+              },
+              { 
+                data: [],
+                label: "溫室3",
+                borderColor: "red",
+                fill: false,
+              }
+            ]
+          }
+        });
+        var dt = new Date();
+        console.log(dt.getHours());
+        for(var i=0; i<dt.getHours(); i++)
+        {
+          var data = JSON.parse(json[i]['sunshine']);
+          $.each(data,function(index, val){
+            myChart.data.datasets[index].data.push(val);
+            myChart.data.labels.push(index);
+          });
+        }
+        myChart.update();
+      }
+  });
+  setTimeout('sunshinechar()', 10000);
+}
+
+/*
+function sunshinechar() {
 
     $.ajax({
         url: 'api/getBerrySunshine',
@@ -143,42 +192,44 @@ function sunshinechar() {
     setTimeout('sunshinechar()',2 * 60 * 60 * 1000);
 
 }
+*/
+
 
 function environmentchar() {
 
-    $.ajax({
-        url: 'api/getBerrySunshine',
-        method: 'GET',
-        dataType: 'json',
-        success: function(json){
-            new Chart(document.getElementById("environment-line-chart"), {
-                type: 'line',
-                data: {
-                  labels: [02, 04, 06, 08 , 10, 12, 14, 16, 18, 20, 22, 24],
-                  datasets: [ { 
-                      data: [
-                        json[11]['environment'],json[10]['environment'],json[9]['environment'],json[8]['environment'],
-                        json[7]['environment'],json[6]['environment'],json[5]['environment'],json[4]['environment'],
-                        json[3]['environment'],json[2]['environment'],json[1]['environment'],json[0]['environment']
-                      ],
-                      label: "環境溫度",
-                      borderColor: "#f38426",
-                      fill: false,
+  $.ajax({
+      url: 'api/getBerrySunshine',
+      method: 'GET',
+      dataType: 'json',
+      success: function(json){
+          new Chart(document.getElementById("environment-line-chart"), {
+              type: 'line',
+              data: {
+                labels: [02, 04, 06, 08 , 10, 12, 14, 16, 18, 20, 22, 24],
+                datasets: [ { 
+                    data: [
+                      json[11]['environment'],json[10]['environment'],json[9]['environment'],json[8]['environment'],
+                      json[7]['environment'],json[6]['environment'],json[5]['environment'],json[4]['environment'],
+                      json[3]['environment'],json[2]['environment'],json[1]['environment'],json[0]['environment']
+                    ],
+                    label: "環境溫度",
+                    borderColor: "#f38426",
+                    fill: false,
 
-                    }
-                  ]
-                }
-              });
-        }
-    });
-    setTimeout('environmentchar()',2 * 60 * 60 * 1000);
+                  }
+                ]
+              }
+            });
+      }
+  });
+  setTimeout('environmentchar()',2 * 60 * 60 * 1000);
 
 }
 
 function phchar() {
 
     $.ajax({
-        url: 'api/getBerrySunshine',
+        url: 'api/getBerryPH',
         method: 'GET',
         dataType: 'json',
         success: function(json){
