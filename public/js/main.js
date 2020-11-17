@@ -133,12 +133,12 @@ function sunshinechar() {
                       ],
                       label: "溫室1",
                       borderColor: "#3cba9f",
-                      fill: false
+                      fill: false,
+                      myChart.addData([40], "04");
                     } 
                   ]
                 }
               });
-            myChart.addData([40, 60], "August");
         }
     });
     setTimeout('sunshinechar()',2 * 60 * 60 * 1000);
@@ -164,7 +164,8 @@ function environmentchar() {
                       ],
                       label: "環境溫度",
                       borderColor: "#f38426",
-                      fill: false
+                      fill: false,
+
                     }
                   ]
                 }
