@@ -138,7 +138,7 @@ function sunshinechar() {
                   ]
                 }
               });
-            myLineChart.addData([40, 60], "August");
+            Chart.addData([40, 60], "August");
         }
     });
     setTimeout('sunshinechar()',2 * 60 * 60 * 1000);
