@@ -111,7 +111,7 @@ function getImg() {
             $("#apDiv95").css('background-size', 'cover');
         }
     });
-    setTimeout('getImg()', 10 * 1000);
+    setTimeout('getImg()', 60 * 1000);
 }
 
 function sunshinechar() {
