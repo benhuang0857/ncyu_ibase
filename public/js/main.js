@@ -161,7 +161,7 @@ function sunshinechar() {
         myChart.update();
       }
   });
-  setTimeout('sunshinechar()', 10000);
+  setTimeout('sunshinechar()', 60 * 60 * 1000);
 }
 
 function environmentchar() {
@@ -199,7 +199,7 @@ function environmentchar() {
         myChart.update();
       }
   });
-  setTimeout('environmentchar()',2 * 60 * 60 * 1000);
+  setTimeout('environmentchar()',60 * 60 * 1000);
 
 }
 
@@ -261,5 +261,5 @@ function phchar() {
               });
         }
     });
-    setTimeout('phchar()',2 * 60 * 60 * 1000);
+    setTimeout('phchar()',60 * 60 * 1000);
 }
