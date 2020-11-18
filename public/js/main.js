@@ -151,12 +151,12 @@ function sunshinechar() {
         for(var i=0; i<Object.keys(json).length; i++)
         {
           var data = JSON.parse(json[i]['sunshine']);
-          var time = dt.getHours();
+          var time = dt.getHours() - Object.keys(json).length;
           $.each(data,function(index, val){
             myChart.data.datasets[index].data.push(val);
             
           });
-          myChart.data.labels.push(time - i);
+          myChart.data.labels.push((time)%24 + i +1);
         }
         myChart.update();
       }
@@ -192,8 +192,9 @@ function environmentchar() {
         for(var i=0; i<Object.keys(json).length; i++)
         {
           var val = json[i]['environment'];
+          var time = dt.getHours() - Object.keys(json).length;
           myChart.data.datasets[0].data.push(val);
-          myChart.data.labels.push(i);
+          myChart.data.labels.push((time)%24 + i +1);
         }
         myChart.update();
       }
