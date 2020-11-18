@@ -163,63 +163,38 @@ function sunshinechar() {
   setTimeout('sunshinechar()', 10000);
 }
 
-/*
-function sunshinechar() {
-
-    $.ajax({
-        url: 'api/getBerrySunshine',
-        method: 'GET',
-        dataType: 'json',
-        success: function(json){
-            var sunshine11 = JSON.parse(json[11]['sunshine']);
-
-            var myChart = new Chart(document.getElementById("sunshine-line-chart"), {
-                type: 'line',
-                data: {
-                  labels: [02, 04, 06, 08 , 10, 12, 14, 16, 18, 20, 22, 24],
-                  datasets: [ { 
-                      data: [
-                        sunshine11[0]
-                      ],
-                      label: "溫室1",
-                      borderColor: "#3cba9f",
-                      fill: false,
-                    } 
-                  ]
-                }
-              });
-        }
-    });
-    setTimeout('sunshinechar()',2 * 60 * 60 * 1000);
-
-}
-*/
-
-
 function environmentchar() {
 
   $.ajax({
-      url: 'api/getBerry',
+      url: 'api/getBerrySunshine',
       method: 'GET',
       dataType: 'json',
+      
+
       success: function(json){
-          new Chart(document.getElementById("environment-line-chart"), {
-              type: 'line',
-              data: {
-                labels: [02, 04, 06, 08 , 10, 12, 14, 16, 18, 20, 22, 24],
-                datasets: [ { 
-                    data: [
-                      json[11]['environment'],json[10]['environment'],json[9]['environment'],json[8]['environment'],
-                      json[7]['environment'],json[6]['environment'],json[5]['environment'],json[4]['environment'],
-                      json[3]['environment'],json[2]['environment'],json[1]['environment'],json[0]['environment']
-                    ],
-                    label: "環境溫度",
-                    borderColor: "#f38426",
-                    fill: false,
-                  }
-                ]
+        var ctx = document.getElementById('environment-line-chart').getContext('2d');
+        var myChart = new Chart(ctx, {
+          type: 'line',
+          data: {
+            //labels: [02, 04, 06, 08 , 10, 12, 14, 16, 18, 20, 22, 24],
+            datasets: [{ 
+                data: [],
+                label: "溫度",
+                borderColor: "orange",
+                fill: false,
               }
-            });
+            ]
+          }
+        });
+        var dt = new Date();
+
+        for(var i=0; i<Object.keys(json).length; i++)
+        {
+          var val = json[i]['environment'];
+          myChart.data.datasets[0].data.push(val);
+          myChart.data.labels.push(i);
+        }
+        myChart.update();
       }
   });
   setTimeout('environmentchar()',2 * 60 * 60 * 1000);

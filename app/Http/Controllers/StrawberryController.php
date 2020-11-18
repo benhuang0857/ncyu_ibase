@@ -25,7 +25,7 @@ class StrawberryController extends Controller
 
     public function getTemp()
     {
-        $strawberry = Strawberry::orderBy('created_at', 'desc')->take(12)->get();
+        $strawberry = Strawberry::orderBy('created_at', 'desc')->first();
         return response()->json($strawberry, 200);
     }
 
