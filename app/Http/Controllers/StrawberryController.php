@@ -5,10 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Model\Strawberry;
 use Carbon\Carbon;
+use DateTimeInterface;
 use DB;
 
 class StrawberryController extends Controller
 {
+
+    protected function serializeDate(DateTimeInterface $date)
+    {
+        return $date->format('Y-m-d H:i:s');
+    }
+
     public function post(Request $req)
     {      
         $strawberry = Strawberry::create($req->all());
