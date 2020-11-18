@@ -148,7 +148,7 @@ function sunshinechar() {
         });
         var dt = new Date();
 
-        for(var i=0; i<dt.getHours(); i++)
+        for(var i=0; i<Object.keys(json).length; i++)
         {
           var data = JSON.parse(json[i]['sunshine']);
           $.each(data,function(index, val){
