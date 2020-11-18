@@ -535,8 +535,8 @@ body::-webkit-scrollbar {
               <img src="images/information_2.png" width="1920" height="1080" alt="map">
               <div id="apDiv40"></div>
               <div id="apDiv39"></div>
-          <div id="apDiv38">m3/s</div>
-          <div id="apDiv37">mm</div>
+          <div id="apDiv38">L</div>
+          <div id="apDiv37">cm</div>
           <div id="apDiv36">%</div>
               <div id="apDiv35">°C</div>
               <div id="apDiv34"></div>
@@ -547,8 +547,8 @@ body::-webkit-scrollbar {
               <div id="apDiv29">56</div>
               <div id="apDiv28"></div>
           <div id="apDiv27"></div>
-          <div id="apDiv26">m3/s</div>
-          <div id="apDiv25">mm</div>
+          <div id="apDiv26">L</div>
+          <div id="apDiv25">cm</div>
                   <div id="apDiv24">%</div>
                    <div id="apDiv23">°C</div>
               <div id="apDiv22"></div>
