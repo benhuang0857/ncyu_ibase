@@ -1,7 +1,7 @@
 $(document).ready(function(){
     getBerry();
     sunshinechar();
-    //environmentchar();
+    environmentchar();
     phchar();
     getImg();
     $('.knob').knob();
@@ -124,7 +124,7 @@ function sunshinechar() {
         var myChart = new Chart(ctx, {
           type: 'line',
           data: {
-            labels: [02, 04, 06, 08 , 10, 12, 14, 16, 18, 20, 22, 24],
+            //labels: [02, 04, 06, 08 , 10, 12, 14, 16, 18, 20, 22, 24],
             datasets: [{ 
                 data: [],
                 label: "溫室1",
@@ -147,14 +147,15 @@ function sunshinechar() {
           }
         });
         var dt = new Date();
-        console.log(dt.getHours());
+
         for(var i=0; i<dt.getHours(); i++)
         {
           var data = JSON.parse(json[i]['sunshine']);
           $.each(data,function(index, val){
             myChart.data.datasets[index].data.push(val);
-            myChart.data.labels.push(index);
+            
           });
+          myChart.data.labels.push(i);
         }
         myChart.update();
       }
@@ -198,7 +199,7 @@ function sunshinechar() {
 function environmentchar() {
 
   $.ajax({
-      url: 'api/getBerrySunshine',
+      url: 'api/getBerry',
       method: 'GET',
       dataType: 'json',
       success: function(json){
@@ -215,7 +216,6 @@ function environmentchar() {
                     label: "環境溫度",
                     borderColor: "#f38426",
                     fill: false,
-
                   }
                 ]
               }
@@ -270,10 +270,19 @@ function phchar() {
                         fill: false
                     }
                   ]
+                },
+                options: {
+                  scales: {
+                      yAxes: [{
+                          ticks: {
+                              suggestedMin: 5.0,
+                              suggestedMax: 7.0
+                          }
+                      }]
+                  }
                 }
               });
         }
     });
     setTimeout('phchar()',2 * 60 * 60 * 1000);
-
 }
