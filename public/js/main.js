@@ -276,7 +276,7 @@ function phchar() {
 function phchar() {
 
   $.ajax({
-      url: 'api/getBerryPH',
+      url: 'api/getBerrySunshine',
       method: 'GET',
       dataType: 'json',
       
