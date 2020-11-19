@@ -306,9 +306,12 @@ function phchar() {
 
         for(var i=0; i<Object.keys(json).length - 1; i++)
         {
-          var val = json[i]['acid'];
+          var data = JSON.parse(json[i]['acid']);
           var time = dt.getHours() - Object.keys(json).length;
-          myChart.data.datasets[0].data.push(val);
+          $.each(data,function(index, val){
+            myChart.data.datasets[index].data.push(val);
+            
+          });
           myChart.data.labels.push((time)%24 + i +2);
         }
         myChart.update();
