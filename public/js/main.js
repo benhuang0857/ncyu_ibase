@@ -227,9 +227,12 @@ function phchar() {
             new Chart(document.getElementById("ph-line-chart"), {
                 type: 'line',
                 data: {
-                  labels: [02, 04, 06, 08 , 10, 12, 14, 16, 18, 20, 22, 24],
+                  labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24],
                   datasets: [ { 
                       data: [
+                        ph11[0],ph10[0],ph9[0],ph8[0],
+                        ph7[0],ph6[0],ph5[0],ph4[0],
+                        ph3[0],ph2[0],ph1[0],ph0[0],
                         ph11[0],ph10[0],ph9[0],ph8[0],
                         ph7[0],ph6[0],ph5[0],ph4[0],
                         ph3[0],ph2[0],ph1[0],ph0[0],
@@ -239,6 +242,9 @@ function phchar() {
                       fill: false
                     },{ 
                         data: [
+                          ph11[1],ph10[1],ph9[1],ph8[1],
+                          ph7[1],ph6[1],ph5[1],ph4[1],
+                          ph3[1],ph2[1],ph1[1],ph0[1],
                           ph11[1],ph10[1],ph9[1],ph8[1],
                           ph7[1],ph6[1],ph5[1],ph4[1],
                           ph3[1],ph2[1],ph1[1],ph0[1],
