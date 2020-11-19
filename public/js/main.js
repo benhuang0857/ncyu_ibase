@@ -300,7 +300,17 @@ function phchar() {
                 fill: false,
               },
             ]
-          }
+          },
+          options: {
+              scales: {
+                  yAxes: [{
+                      ticks: {
+                          suggestedMin: 5.0,
+                          suggestedMax: 7.0
+                      }
+                  }]
+              }
+            }
         });
         var dt = new Date();
 
