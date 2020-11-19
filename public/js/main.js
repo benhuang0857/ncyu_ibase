@@ -149,7 +149,7 @@ function sunshinechar() {
         });
         var dt = new Date();
 
-        for(var i=0; i<Object.keys(json).length; i++)
+        for(var i=0; i<Object.keys(json).length - 1; i++)
         {
           var data = JSON.parse(json[i]['sunshine']);
           var time = dt.getHours() - Object.keys(json).length;
@@ -190,7 +190,7 @@ function environmentchar() {
         });
         var dt = new Date();
 
-        for(var i=0; i<Object.keys(json).length; i++)
+        for(var i=0; i<Object.keys(json).length - 1; i++)
         {
           var val = json[i]['environment'];
           var time = dt.getHours() - Object.keys(json).length;
