@@ -157,7 +157,8 @@ function sunshinechar() {
             myChart.data.datasets[index].data.push(val);
             
           });
-          myChart.data.labels.push((time)%24 + i +1);
+          //myChart.data.labels.push((time)%24 + i +1);
+            myChart.data.labels.push((time)%23);
         }
         myChart.update();
       }
