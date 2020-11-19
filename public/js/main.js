@@ -204,6 +204,7 @@ function environmentchar() {
 
 }
 
+/*
 function phchar() {
 
     $.ajax({
@@ -270,3 +271,50 @@ function phchar() {
     });
     setTimeout('phchar()',60 * 60 * 1000);
 }
+*/
+
+function phchar() {
+
+  $.ajax({
+      url: 'api/getBerryPH',
+      method: 'GET',
+      dataType: 'json',
+      
+
+      success: function(json){
+        var ctx = document.getElementById('ph-line-chart').getContext('2d');
+        var myChart = new Chart(ctx, {
+          type: 'line',
+          data: {
+            //labels: [02, 04, 06, 08 , 10, 12, 14, 16, 18, 20, 22, 24],
+            datasets: [{ 
+                data: [],
+                label: "ph01",
+                borderColor: "#a2d246",
+                fill: false,
+              },
+               { 
+                data: [],
+                label: "ph02",
+                borderColor: "#e8c3b9",
+                fill: false,
+              },
+            ]
+          }
+        });
+        var dt = new Date();
+
+        for(var i=0; i<Object.keys(json).length - 1; i++)
+        {
+          var val = json[i]['acid'];
+          var time = dt.getHours() - Object.keys(json).length;
+          myChart.data.datasets[0].data.push(val);
+          myChart.data.labels.push((time)%24 + i +2);
+        }
+        myChart.update();
+      }
+  });
+  setTimeout('phchar()',60 * 60 * 1000);
+
+}
+
