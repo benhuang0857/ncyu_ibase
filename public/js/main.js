@@ -157,8 +157,7 @@ function sunshinechar() {
             myChart.data.datasets[index].data.push(val);
             
           });
-          //myChart.data.labels.push((time)%24 + i +1);
-            myChart.data.labels.push((time)%23);
+          myChart.data.labels.push((time)%24 + i +2);
         }
         myChart.update();
       }
@@ -196,7 +195,7 @@ function environmentchar() {
           var val = json[i]['environment'];
           var time = dt.getHours() - Object.keys(json).length;
           myChart.data.datasets[0].data.push(val);
-          myChart.data.labels.push((time)%24 + i +1);
+          myChart.data.labels.push((time)%24 + i +2);
         }
         myChart.update();
       }
