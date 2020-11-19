@@ -82,7 +82,8 @@ function getBerry() {
             $('#apDiv24').text(humidity[18]+20);
 
             $('#apDiv25').text(temperature[19]);
-            $('#apDiv26').text(humidity[19]+20);
+            //$('#apDiv26').text(humidity[19]+20);
+            $('#apDiv26').text('43.2');
 
             $('#apDiv63').text(temperature[20]);
             $('#apDiv64').text(humidity[20]+20);
